@@ -1,0 +1,7 @@
+<!--if there is a video selected then display the details -->
+<div *ngIf="video">
+  <h4>{{ video.snippet.title | uppercase }} Details</h4>
+  <div><span>id: </span>{{ video.id.videoId }}</div>
+  <div></div>
+  <button (click)="goBack()">go back</button>
+</div>

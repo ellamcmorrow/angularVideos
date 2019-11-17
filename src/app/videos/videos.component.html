@@ -1,0 +1,23 @@
+<h2>Video List</h2>
+<div>
+  <ul class="videos">
+    <li *ngFor="let video of videos">
+      <div class="card">
+        <img
+          [src]="video.snippet.thumbnails.medium.url"
+          style="width:100%"
+          alt="..."
+        />
+        <div class="card-container">
+          <h4>
+            <b
+              ><a routerLink="/detail/{{ video.id.videoId }}">
+                {{ video.snippet.title }}
+              </a></b
+            >
+          </h4>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
