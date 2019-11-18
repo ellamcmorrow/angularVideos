@@ -1,19 +1,21 @@
 <h2>Video List</h2>
 <div>
-  <ul class="videos">
+  <ul class="videos yt-c-videos__list">
     <li *ngFor="let video of videos">
-      <div class="card">
+      <div class="yt-c-card">
         <img
-          [src]="video.snippet.thumbnails.medium.url"
-          style="width:100%"
-          alt="..."
+        [src]="video.snippet.thumbnails.medium.url"
+        style="width:100%"
+        alt="..."
         />
-        <div class="card-container">
+        <div class="yt-c-card__container">
           <h4>
             <b
-              ><a routerLink="/detail/{{ video.id.videoId }}">
-                {{ video.snippet.title }}
-              </a></b
+            ><a routerLink="/detail/{{ video.id.videoId }}">
+              {{ video.snippet.title }}
+              {{ video.id.videoId }}
+
+            </a></b
             >
           </h4>
         </div>
