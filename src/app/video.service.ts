@@ -33,10 +33,12 @@ export class VideoService {
     /** GET hero by id. Will 404 if id not found */
     getVideo(id: string): Observable<Video> {
         const url = `https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${id}&key=AIzaSyAsMiGn7Z09Yh1zYyJlmPf0ak8XwZ7lFJY`;
-        return this.http.get<Video>(url).pipe(
-            tap(_ => this.log(`fetched video id=${id}`)),
-            catchError(this.handleError<Video>(`getVideo id=${id}`))
-        );
+        return this.http.get<Video>(url)
+            .pipe(
+                //map(video => _.values(data))
+                tap(_ => this.log(`fetched video id=${id}`)),
+                catchError(this.handleError<Video>(`getVideo id=${id}`))
+            );
     }
 
     /** Log a VideoService message with the MessageService */
