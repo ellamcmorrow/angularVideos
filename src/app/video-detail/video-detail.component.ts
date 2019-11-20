@@ -33,7 +33,18 @@ export class VideoDetailComponent implements OnInit {
 //return a single video
   getVideo(): void {
     const id = this.route.snapshot.paramMap.get("id.videoId");
-    this.videoService.getVideo(id).subscribe(video => this.video = video);
+    this.videoService.getVideo(id).subscribe(data => {
+        const video = data.items[0];
+        this.video = {
+          videoId: video.id,
+          title: video.snippet.title,
+          thumbnailUrl: video.snippet.thumbnails.default.url,
+          channelId: video.snippet.channelId,
+          channelTitle: video.snippet.channelTitle,
+          publishedAt: video.snippet.publishedAt,
+          description: video.snippet.description,
+        };
+    });
     console.log("Video:" + JSON.stringify(this.video));
   }
 

@@ -23,7 +23,7 @@ export class VideoService {
     }
 
     /** GET videos from the server */
-    getVideos(): Observable<Video[]> {
+    getVideos(): Observable<any[]> {
         return this.http.get<Video[]>(this.videosUrl).pipe(
             tap(videos => this.log(`fetched videos`)), // log each values emitted by observable
             catchError(this.handleError('getvideos', []))
@@ -31,7 +31,7 @@ export class VideoService {
     }
 
     /** GET hero by id. Will 404 if id not found */
-    getVideo(id: string): Observable<Video> {
+    getVideo(id: string): Observable<any> {
         const url = `https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${id}&key=AIzaSyAsMiGn7Z09Yh1zYyJlmPf0ak8XwZ7lFJY`;
         return this.http.get<Video>(url)
             .pipe(
