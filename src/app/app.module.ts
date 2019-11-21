@@ -8,13 +8,15 @@ import { VideosComponent } from "./videos/videos.component";
 import { VideoDetailComponent } from "./video-detail/video-detail.component";
 import { MessagesComponent } from "./messages/messages.component";
 import { AppRoutingModule } from "./app-routing.module";
+import { VideoSearchComponent } from './video-search/video-search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VideosComponent,
     VideoDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    VideoSearchComponent
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
   providers: [],
