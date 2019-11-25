@@ -3,12 +3,30 @@ h1 {
   font-size: 1.2em;
   color: #999;
   margin-bottom: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 h2 {
   font-size: 2em;
   margin-top: 0;
   padding-top: 0;
+  font-family: 'Montserrat', sans-serif;
 }
+
+h3 {
+  font-size: 2em;
+  margin-top: 0;
+  padding-top: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
 nav a {
   padding: 5px 10px;
   text-decoration: none;
@@ -26,4 +44,7 @@ nav a:hover {
 }
 nav a.active {
   color: #039be5;
+}
+.yt-c-app__title {
+  margin-bottom: 50px;
 }

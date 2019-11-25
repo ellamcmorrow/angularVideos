@@ -35,7 +35,6 @@ export class VideoService {
         const url = `https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${id}&key=AIzaSyAsMiGn7Z09Yh1zYyJlmPf0ak8XwZ7lFJY`;
         return this.http.get<Video>(url)
             .pipe(
-                //map(video => _.values(data))
                 tap(_ => this.log(`fetched video id=${id}`)),
                 catchError(this.handleError<Video>(`getVideo id=${id}`))
             );
@@ -63,18 +62,5 @@ export class VideoService {
             // Let the app keep running by returning an empty result.
             return of(result as T);
         };
-    }
-
-    /* GET heroes whose name contains search term */
-    searchVideos(term: string): Observable<any> {
-        if (!term.trim()) {
-            // if not search term, return empty hero array.
-            return of([]);
-        }
-        return this.http.get <Video[]>(`https://www.googleapis.com/youtube/v3/search?key=AIzaSyAsMiGn7Z09Yh1zYyJlmPf0ak8XwZ7lFJY&channelId=UCcyq283he07B7_KUX07mmtA&order=date&part=title=${term}&type=video,id&maxResults=10`)
-            .pipe(
-            tap(_ => this.log(`found heroes matching "${term}"`)),
-            catchError(this.handleError<Video[]>('searchVideos', []))
-        );
     }
 }

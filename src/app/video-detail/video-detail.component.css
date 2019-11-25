@@ -1,4 +1,67 @@
 /* videoDetailComponent's private CSS styles */
+body {
+  background-color: #2d3436;
+  margin: 10%;
+}
+/* AppComponent's private CSS styles */
+h1 {
+  font-size: 1.2em;
+  color: #999;
+  margin-bottom: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+h2 {
+  font-size: 2em;
+  margin-top: 0;
+  padding-top: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h3 {
+  font-size: 1.5 rem;
+  margin-top: 0;
+  padding-top: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+.card {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  min-height: 300px;
+}
+.card {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  min-height: 300px;
+}
+
+.img {
+  border-radius: 0%;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1;
+}
+
+.details-container {
+  flex: 2;
+}
+
+.avatar-container {
+  flex: 1;
+}
+
+
 label {
   display: inline-block;
   width: 3em;

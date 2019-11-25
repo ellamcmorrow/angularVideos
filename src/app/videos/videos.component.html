@@ -1,5 +1,3 @@
-<h2>Video List</h2>
-<app-video-search></app-video-search>
 <div>
   <ul class="videos yt-c-videos__list">
     <li *ngFor="let video of videos">
@@ -13,7 +11,7 @@
           <h4>
             <b
             ><a routerLink="/detail/{{ video.id.videoId }}">
-              {{ video.snippet.title }}
+              {{ video.snippet.title }} <br>
               {{ video.id.videoId }}
 
             </a></b

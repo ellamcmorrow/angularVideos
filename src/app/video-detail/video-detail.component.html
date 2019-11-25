@@ -1,9 +1,24 @@
 <!--if there is a video selected then display the details -->
 <div *ngIf="video">
-    <h4>{{ video.title | uppercase }} </h4>
-    <div><span><b>id: </b></span>{{ video.videoId }}</div>
-    <div><span><b>description:</b></span>{{ video.description.slice(0, 400) }} ...
+    <div class="row">
+        <div class="avatar-container">
+            <div class="photo">
+                <img class="img" [src]="video.thumbnailUrl"/>
+            </div>
+        </div>
+        <div class="details-container">
+            <div class="content">
+                <b><h3>{{ video.title }}</h3></b>
+                <p>
+                    {{ video.description }}
+                </p>
+            </div>
+        </div>
     </div>
+
+
     <button (click)="goBack()">go back</button>
+
 </div>
+
 
