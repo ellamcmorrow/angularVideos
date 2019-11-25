@@ -5,7 +5,7 @@ import { VideoService } from "../video.service";
 @Component({
   selector: "app-videos",
   templateUrl: "./videos.component.html",
-  styleUrls: ["./videos.component.css"]
+  styleUrls: ["./videos.component.less"]
 })
 export class VideosComponent implements OnInit {
   videos: Video[] = [];

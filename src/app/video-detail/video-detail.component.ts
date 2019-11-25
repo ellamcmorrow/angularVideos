@@ -7,19 +7,10 @@ import { VideoService } from "../video.service";
 @Component({
   selector: "app-video-detail",
   templateUrl: "./video-detail.component.html",
-  styleUrls: ["./video-detail.component.css"]
+  styleUrls: ["./video-detail.component.less"]
 })
 export class VideoDetailComponent implements OnInit {
-   video: Video;
-   // = {
-  //   videoId: undefined,
-  //   title: undefined,
-  //   thumbnailUrl: undefined,
-  //   channelTitle: undefined,
-  //   channelId: undefined,
-  //   publishedAt: undefined,
-  //   description: undefined,
-  // };
+  video: Video;
 
   constructor(
     private route: ActivatedRoute, //holds info about the route
@@ -30,20 +21,20 @@ export class VideoDetailComponent implements OnInit {
   ngOnInit(): void {
     this.getVideo();
   }
-//return a single video
+  //return a single video
   getVideo(): void {
     const id = this.route.snapshot.paramMap.get("id.videoId");
     this.videoService.getVideo(id).subscribe(data => {
-        const video = data.items[0];
-        this.video = {
-          videoId: video.id,
-          title: video.snippet.title,
-          thumbnailUrl: video.snippet.thumbnails.default.url,
-          channelId: video.snippet.channelId,
-          channelTitle: video.snippet.channelTitle,
-          publishedAt: video.snippet.publishedAt,
-          description: video.snippet.description,
-        };
+      const video = data.items[0];
+      this.video = {
+        videoId: video.id,
+        title: video.snippet.title,
+        thumbnailUrl: video.snippet.thumbnails.default.url,
+        channelId: video.snippet.channelId,
+        channelTitle: video.snippet.channelTitle,
+        publishedAt: video.snippet.publishedAt,
+        description: video.snippet.description
+      };
     });
     console.log("Video:" + JSON.stringify(this.video));
   }
