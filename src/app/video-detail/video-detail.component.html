@@ -1,10 +1,9 @@
 <!--if there is a video selected then display the details -->
-<div *ngIf="video">
-  <div class="cards__item">
-    <div class="card">
-      <div class="card__content">
-        <div class="card__title">{{ video.title | uppercase }}</div>
-        <p class="card__text">
+  <div class="cards__container">
+    <div class="yt-c-video-details__card">
+      <div class="yt-c-video-details__card--content">
+        <div class="yt-c-video-details__card--text">{{ video.title | uppercase }}</div>
+        <p class=".yt-c-video-details__card--text">
           {{ video.description }}
         </p>
         <button (click)="goBack()" class="btn btn--block card__btn">
@@ -13,4 +12,4 @@
       </div>
     </div>
   </div>
-</div>
+

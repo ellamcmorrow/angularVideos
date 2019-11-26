@@ -1,7 +1,7 @@
 <ul class="videos yt-c-videos__list">
   <li *ngFor="let video of videos" class="yt-c-videos__list--item">
     <div class="yt-c-videos__card">
-      <img [src]="video.snippet.thumbnails.medium.url" class="yt-c-videos__card__image" />
+      <img [src]="video.snippet.thumbnails.medium.url" class="yt-c-videos__card--image" />
       <div class="yt-c-videos__card--content">
         <div class="yt-c-videos__card--title">
           <b> {{ video.snippet.title }} <br /> </b>
