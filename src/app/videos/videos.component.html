@@ -1,12 +1,12 @@
-<ul class="videos yt-c-videos__list cards">
-  <li *ngFor="let video of videos" class="cards__item">
-    <div class="card">
-      <img [src]="video.snippet.thumbnails.medium.url" class="card__image" />
-      <div class="card__content">
-        <div class="card__title">
+<ul class="videos yt-c-videos__list">
+  <li *ngFor="let video of videos" class="yt-c-videos__list--item">
+    <div class="yt-c-videos__card">
+      <img [src]="video.snippet.thumbnails.medium.url" class="yt-c-videos__card__image" />
+      <div class="yt-c-videos__card--content">
+        <div class="yt-c-videos__card--title">
           <b> {{ video.snippet.title }} <br /> </b>
         </div>
-        <button class="btn btn--block card__btn">
+        <button class="yt-c-videos__btn">
           <a routerLink="/detail/{{ video.id.videoId }}">View</a>
         </button>
       </div>

@@ -17,7 +17,7 @@ html {
 
 body {
   color: @gray;
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0;
@@ -28,27 +28,26 @@ body {
   -moz-font-feature-settings: "liga" on;
 }
 
+
 img {
   height: auto;
   max-width: 100%;
   vertical-align: middle;
 }
 
-.btn {
+.yt-c-videos__btn {
   background-color: white;
   border: 1px solid @gray-light;
   //border-radius: 1rem;
   color: @gray-dark;
   padding: 0.5rem;
   text-transform: lowercase;
-}
-
-.btn--block {
   display: block;
   width: 100%;
 }
 
-.cards {
+
+.yt-c-videos__list {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -56,7 +55,7 @@ img {
   padding: 0;
 }
 
-.cards__item {
+.yt-c-videos__list--item {
   display: flex;
   padding: 1rem;
   @media (min-width: 40rem) {
@@ -67,7 +66,7 @@ img {
   }
 }
 
-.card {
+.yt-c-videos__card {
   background-color: white;
   border-radius: 0.25rem;
   box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
@@ -81,14 +80,14 @@ img {
   }
 }
 
-.card__content {
+.yt-c-videos__card--content {
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
   padding: 1rem;
 }
 
-.card__image {
+.yt-c-videos__card__image {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -110,17 +109,10 @@ img {
     }
   }
 }
-.card__title {
+.yt-c-videos__card--title {
   color: @gray-dark;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 300;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.card__text {
-  flex: 1 1 auto;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  margin-bottom: 1.25rem;
+  letter-spacing: 0.5px;
+  padding-bottom: 20px;
 }
