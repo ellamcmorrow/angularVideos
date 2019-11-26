@@ -1,15 +1,14 @@
-<!--if there is a video selected then display the details -->
-  <div class="cards__container">
-    <div class="yt-c-video-details__card">
-      <div class="yt-c-video-details__card--content">
-        <div class="yt-c-video-details__card--text">{{ video.title | uppercase }}</div>
-        <p class=".yt-c-video-details__card--text">
-          {{ video.description }}
-        </p>
-        <button (click)="goBack()" class="btn btn--block card__btn">
-          Back
-        </button>
-      </div>
+<div class="cards__container">
+  <div class="yt-c-video-details__card">
+    <div class="yt-c-video-details__card-content">
+      <div class="yt-c-video-details__card-title">{{ video.title | uppercase }}</div>
+      <p class=".yt-c-video-details__card-text">
+        {{ video.description }}
+      </p>
+      <button (click)="goBack()" class="btn btn-block card__btn">
+        Back
+      </button>
     </div>
   </div>
+</div>
 

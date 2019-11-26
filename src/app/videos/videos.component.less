@@ -35,6 +35,18 @@ img {
   vertical-align: middle;
 }
 
+a {
+  font-family: "Montserrat", sans-serif;
+  color: @gray-dark;
+
+}
+
+a:hover {
+  font-family: "Montserrat", sans-serif;
+  color: @gray-darker;
+
+}
+
 .yt-c-videos__btn {
   background-color: white;
   border: 1px solid @gray-light;
@@ -44,6 +56,8 @@ img {
   text-transform: lowercase;
   display: block;
   width: 100%;
+  font-family: "Montserrat", sans-serif;
+
 }
 
 
@@ -55,7 +69,7 @@ img {
   padding: 0;
 }
 
-.yt-c-videos__list--item {
+.yt-c-videos__list-item {
   display: flex;
   padding: 1rem;
   @media (min-width: 40rem) {
@@ -73,21 +87,22 @@ img {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+
   &:hover {
-    .yt-c-videos__card--image {
+    .yt-c-videos__card-image {
       filter: contrast(100%);
     }
   }
 }
 
-.yt-c-videos__card--content {
+.yt-c-videos__card-content {
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
   padding: 1rem;
 }
 
-.yt-c-videos__card--image {
+.yt-c-videos__card-image {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -98,18 +113,21 @@ img {
   overflow: hidden;
   position: relative;
   transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+
   &::before {
     content: "";
     display: block;
     padding-top: 56.25%; // 16:9 aspect ratio
   }
+
   @media (min-width: 40rem) {
     &::before {
       padding-top: 66.6%; // 3:2 aspect ratio
     }
   }
 }
-.yt-c-videos__card--title {
+
+.yt-c-videos__card-title {
   color: @gray-dark;
   font-size: 1rem;
   font-weight: 300;
